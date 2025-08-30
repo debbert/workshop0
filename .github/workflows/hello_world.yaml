@@ -26,7 +26,7 @@ jobs: #default run sequentially, can be concurrently
       uses: mscoutermarsh/cowsays-action@master
       with:
         # step - context
-        text: "LOLOL ${{steps.s01.outputs.CURR_DATE}}"
+        text: "LOLOL ${{steps.s01.outputs.CURR_DATE}},${{github.ref}}, ${{github.repository}}"
         color: "green"
     #- id: s01
     # cat the file
