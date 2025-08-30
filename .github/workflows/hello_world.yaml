@@ -1,0 +1,21 @@
+###
+# {name:hello_world,
+#   on:[push],
+#   jobs: { }
+# }
+###
+# name
+name: hello_world
+
+# trigger
+on: #on is an array
+- push
+
+# one or more jobs
+jobs: #default run sequentially, can be concurrently
+  greetings:
+    runs-on: ubuntu-latest
+    steps: #array of one or more things
+    - id: s00 #good to name the steps
+      #running some shell bash command
+      run: echo "current time in github is $(date)"
