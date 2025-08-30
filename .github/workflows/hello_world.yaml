@@ -19,3 +19,9 @@ jobs: #default run sequentially, can be concurrently
     - id: s00 #good to name the steps
       #running some shell bash command
       run: echo "current time in github is $(date)"
+    - id: s01
+    # cat the file
+    run: cat README.md
+    - id: s02
+    # ls
+    run: ls
