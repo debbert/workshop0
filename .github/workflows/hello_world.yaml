@@ -22,8 +22,8 @@ jobs: #default run sequentially, can be concurrently
     - id: s02
       uses: mscoutermarsh/cowsays-action@master
       with:
-      text: "hihi"
-      color: "red"
+        text: "hihi"
+        color: "red"
     #- id: s01
     # cat the file
     #run: ls -al
