@@ -21,7 +21,8 @@ jobs: #default run sequentially, can be concurrently
       run: echo "current time in github is $(date)"
     - id: s01
     # cat the file
-    run: cat README.md
+    run: ls -al
+    
     - id: s02
     # ls
-    run: ls
+    run: cat README.md
