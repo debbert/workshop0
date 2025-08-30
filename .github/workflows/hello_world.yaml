@@ -18,12 +18,16 @@ jobs: #default run sequentially, can be concurrently
     steps: #array of one or more things
     - id: s00 #good to name the steps
       #running some shell bash command
-      run: echo "current time in github is $(date)"
+      run: echo "current time in github is $(date),${GITHUB_OUTPUT}"
+    - id: s01
+      # create a value and pass to next step
+      run: echo "CURR_DATE=$(date)" >> $GITHUB_OUTPUT
     - id: s02
       uses: mscoutermarsh/cowsays-action@master
       with:
-        text: "hihi"
-        color: "red"
+        # step - context
+        text: "LOLOL ${{steps.s01.outputs.CURR_DATE}}"
+        color: "green"
     #- id: s01
     # cat the file
     #run: ls -al
