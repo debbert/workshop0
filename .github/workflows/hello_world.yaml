@@ -19,7 +19,7 @@ jobs: #default run sequentially, can be concurrently
     - id: s00 #good to name the steps
       #running some shell bash command
       run: echo "current time in github is $(date)"
-    - id:s02
+    - id: s02
       uses: mscoutermarsh/cowsays-action@master
       with:
       text: "hihi"
